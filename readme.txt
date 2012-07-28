@@ -12,9 +12,9 @@
 -------------------------------------------------------------*/
 *印はこのテーマでの必要最低限のファイル 無印はなくても一応動くファイル
 style.css*
-default.css* （私がいつも使っているリセットCSSとよく使うクラスなどをまとめてある）
+default.css* 
 archieve.php 
-header.php* （DTDはxhtml1.0 transitionalです）
+header.php* （DTDはxhtml1.0 transitional）
 index.php*
 home.php
 loop.php*
