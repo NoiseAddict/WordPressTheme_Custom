@@ -1,0 +1,494 @@
+@charset "utf-8";
+
+/*
+Theme Name: mypace custom theme
+Theme URI: http://mypacecreator.net/theme/category/mypace-custom/
+Description: WordPress初心者のテーマカスタム練習用。シンプルなソースだけどウィジェットやカスタムメニュー、カスタム背景、アイキャッチに対応させました。CSSやマークアップが気に入らなかったら変えちゃってください。
+Version: 1.6
+Author: Kei Nomura(@mypacecreator)
+Author URI: http://mypacecreator.net/
+License: GNU General Public License
+License URI: license.txt
+Tags: green, Two-columns
+*/
+
+@import url("default.css");
+
+/*------------------------------------------------------------------------------
+	基本スタイル　
+-------------------------------------------------------------------------------*/
+body {
+	background-color: #F0F4EA;
+	color: #333;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 0.85em;
+}
+
+/*------------------------------------------------------------------------------
+	リンクカラー
+	下線はdefault.cssで消してあるので、出したいときは適宜指定すること。
+-------------------------------------------------------------------------------*/
+a:link {
+	color:#039;
+}
+a:visited {
+	color:#606;
+}
+a:hover {
+	color: #F60;
+	text-decoration: underline;
+}
+a:active {
+	color:#C00;
+}
+
+a:hover img {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+
+/*------------------------------------------------------------------------------
+	見出し
+-------------------------------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6 {
+	margin-bottom: 20px;
+	clear: both;
+}
+
+h1.pagetitle {
+	color: #030;
+	font-size: large;
+	font-weight: bold;
+	line-height: 60px;
+	height: 60px;
+	padding: 5px 15px;
+	border: 5px solid #ACC798;
+	background-color: #DEE9D6;
+}
+
+.post h1,h2 {
+	color: #030;
+	font-size: large;
+	font-weight: bold;
+	line-height: 2;
+	padding-left: 1em;
+	border-bottom: 5px solid #ACC798;
+	background-color: #DEE9D6;
+}
+
+h2.posttitle { /* 投稿のタイトル */
+	line-height: 1.4;
+	padding: 10px;
+	border-bottom: 5px double #ACC798;
+	background-color: #FFF;
+}
+
+h3 {
+	color: #066;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 2;
+	padding-left: 1em;
+	border-bottom: 3px solid #DEE9D6;
+	background-color: #EDF3E9;
+	margin: 1em 1em 1em 0;
+}
+
+h4 {
+	color: #066;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 1.8;
+	padding-left: 1em;
+	border-bottom: 3px double #428460;
+	margin: 1em 1em 1em 0;
+}
+
+h5,h6 {
+	color: #066;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.8;
+	padding-left: 1em;
+	margin: 1em 2em 1em 0;
+}
+
+/*------------------------------------------------------------------------------
+	レイアウトボックス
+-------------------------------------------------------------------------------*/
+/*------　wrapper　------*/
+#wrapper {
+	width: 940px;
+	margin: 0 auto;
+	border: 8px solid #DEE9D6;
+	background-color: #FFF;
+}
+
+/*------　header　------*/
+#header {
+	height: 100px;
+	background-color: #ACC798;
+	position: relative;
+}
+
+/*------　#global　------*/
+#global {
+	height: 40px;
+	background-color: #DEE9D6;
+	border-top: 3px solid #ACC798;
+}
+
+/*------　main　------*/
+#main {
+	float: left;
+	width: 680px;
+	padding: 10px;
+}
+
+#main.oneColumn { /*固定ページ1カラム用*/
+	width: 920px;
+}
+
+/*------　side　------*/
+#side {
+	width: 200px;
+	background-color: #F5F9F2;
+	padding: 10px;
+	margin: 10px;
+	float: right;
+	display: inline;/* for IE6 */
+}
+
+/*------　footer　------*/
+#footer {
+	color: #FFF;
+	background-color: #ACC798;
+	clear: both;
+}
+
+
+/*------------------------------------------------------------------------------
+		各ボックス内の詳細指定
+-------------------------------------------------------------------------------*/
+
+/*------　header　------*/
+#header p {
+	color: #FFF;
+	font-size: x-small;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+
+#title {
+	font-size: xx-large;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+/*------　menu　------*/
+ul.menu,
+.menu ul { 
+	overflow: hidden;
+}
+
+.menu li {
+	float: left;
+	text-align: center;
+	border-right: 1px dotted #ACC798;
+}
+
+.menu li a{
+	line-height: 40px;
+	font-weight: bold;
+	padding: 0 2em;
+	display: block;
+	position: relative;
+}
+
+/* ドロップダウンナビ */
+.menu li ul {
+	position: absolute;
+	left: -9999em;
+	height: auto;
+	width: 150px;
+}
+
+.menu li li {
+	width: 150px;
+	background-color: #FFC;
+}
+
+.menu li li a, .menu li li a:visited {
+	font-weight:normal;
+	font-size:0.9em;
+	color:#900;
+}
+	
+.menu li:hover ul, .menu li li:hover ul, .menu li li li:hover ul {
+	left: auto;
+}
+
+/*------ main > post　------*/
+.post {
+	background-color: #F5F9F2;
+	padding: 10px;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.post .postdate {
+	color: #666;
+	font-size: x-small;
+	text-align: right;
+	margin-top: -1.5em;
+}
+
+.post .postinfo {
+	color: #666;
+	font-size: x-small;
+	text-align: right;
+	clear: both;
+}
+
+.post li {
+	line-height: 1.6;
+	margin: 0 0 0.5em 3em;
+}
+
+.post ul li {
+	list-style: disc;
+}
+
+.post p a {
+	text-decoration: underline;
+}
+
+blockquote {
+	background-color: #F4F6FE;
+	border: 1px solid #999;
+	margin: 0.5em 1em;
+	padding: 10px 20px 10px 5px;
+}
+
+.sticky { /* 先頭に固定された投稿 */
+	border: 2px solid #DDD; 
+}
+
+/*　画像の配置　*/
+.alignnone { /*　指定なし　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+}
+
+div.alignnone { /*　指定なし:キャプションあり　*/
+	margin-bottom: 10px;
+}
+
+.alignright { /*　右寄せ　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin: 0 0 10px 10px;
+	float: right;
+}
+
+.alignleft { /*　左寄せ　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin: 0 10px 10px 0;
+	float: left;
+}
+
+.aligncenter { /*　中央配置　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin: 0px auto 10px;
+	display: block;
+}
+
+.wp-caption { /*　位置指定した画像の枠　*/
+	text-align: center;
+}
+
+.wp-caption-text, /*　投稿内画像下のキャプション　*/
+.gallery-caption { /*　ギャラリー画像下のキャプション　*/
+	font-size: 12px;
+	line-height: 1.2;
+	color: #666;
+	margin: 0;
+}
+
+.attachment-post-thumbnail { /*　アイキャッチ画像　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin-bottom: 10px;
+}
+
+/*------　side　------*/
+#side h3 {
+	text-align: center;
+	padding: 0;
+	margin: 0 0 10px 0;
+}
+
+/*　widget　*/
+.widget {
+	margin: 0 0 10px 0;
+}
+
+.footerWidget {
+	width: 240px;
+	margin: 10px;
+	float: left;
+}
+
+.widget li {
+	font-size: small;
+	list-style: circle;
+	margin: 0 1em 0 1.5em;
+}
+
+/*------　footer　------*/
+#footer p {
+	margin: 0 10px;
+	clear: both;
+}
+
+.copyright {
+	text-align: right;
+}
+
+.credit {
+	text-align: right;
+	font-size: xx-small;
+}
+
+/*------　投稿関連　------*/
+
+/*　前後の投稿へのリンク　*/
+.pagelink {
+	overflow: auto;
+}
+
+.pageprev {
+	float: left;
+}
+
+.pagenext {
+	float: right;
+}
+
+/* ページ分割した場合に、表示されるページャーのスタイル　*/
+.post ul.pager {
+	background-color: #FFF;
+	padding: 10px;
+	margin: 20px 10px;
+	overflow: auto;
+}
+
+ul.pager li {
+	font-weight: bold;
+	margin: 5px;
+	padding-right: 10px;
+	border-right: 1px #999999 solid;
+	list-style: none;
+	float: left;
+}
+
+/*------　ページトップへ戻る　------*/
+.pagetop {
+	text-align: right;
+	margin: 1em;
+	clear: both;
+}
+
+/*-----　コメント　-----*/
+.comment {
+	background-color: #E2E8D9;
+	padding: 1em;
+	margin: 0 20px 20px 10px;
+}
+
+.bypostauthor { /* 管理人コメント */
+	background-color: #EEE;
+}
+
+.commentmeta {
+	font-size: 0.8em;
+}
+
+dl.commentform {
+	margin: 0 0 1em 1em;
+}
+
+dl.commentform dt {
+	font-weight: bold;
+}
+
+dl.commentform dd {
+	margin-bottom: 1em;
+}
+
+.submitbtn {
+	margin: 10px 0 10px 4em;
+}
+
+.commentform input[type="text"],
+.commentform textarea {
+	border: 1px solid #CCC;
+	padding: 5px;
+	width: 80%;
+}
+
+.commentform input[type="text"]:focus,
+.commentform textarea:focus {
+	background-color: #F0F4EA;
+}
+
+/*----- カレンダー（ウィジェット用） -----*/
+#wp-calendar {
+	width: 90%;
+	margin-bottom: 20px;
+	font-size: small;
+	text-align: center;
+	width: 90%;
+	/*border: thin double #999;*/
+}
+
+#wp-calendar a {
+	color: #369;
+	font-weight: bold;
+}
+
+#wp-calendar a:hover {
+	color: #F90;
+	border: none;
+}
+
+#wp-calendar td, #wp-calendar th {
+	width: 13%;
+}
+
+#wp-calendar caption {
+	padding: 6px 8px;
+	font-weight: bold;
+	color: #036;
+}
+
+#wp-calendar #prev {
+	text-align: left;
+	padding-top: 3px;
+	padding-left: 3px
+}
+
+#wp-calendar #next {
+	text-align: right;
+	padding-top: 3px;
+	padding-right: 3px
+}

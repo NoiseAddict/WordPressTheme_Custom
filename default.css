@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------------------
+defaut.css for WordPress
+ * Modified by Kei Nomura: 2011-07-02
+
+このCSS内では、ブラウザ毎デフォルトスタイルのリセット
+および、ほぼ変更のないであろう要素、良く使うclassのスタイル指定をしています。　
+-------------------------------------------------------------------------------*/
+
+html {
+	overflow-y: scroll;
+}
+
+article, aside, canvas, details, figcaption, figure, header,
+footer, hgroup, menu, nav, section, summary {
+	display: block;
+}
+
+body,div,dl,dt,dd,ul,ol,li,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+	margin: 0;
+	padding: 0;
+}
+
+address,caption,cite,code,dfn,em,strong,th,var {
+	font-style: normal;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
+	font-size: 100%;  
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	line-height: 1.8;
+	margin-bottom: 1em;
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;  
+}
+
+img,abbr,acronym,fieldset,a img {
+	border: none;
+}
+
+img,li,dt,dd {
+	vertical-align: bottom;
+}
+	* html li ,
+	*:first-child+html li {
+		vertical-align: baseline;
+	}
+
+q:before,q:after {
+	content: '';
+}
+object,embed {
+	vertical-align: top;
+}
+
+ul{
+	list-style-type: none;
+}
+
+ol {
+	list-style-type: decimal;
+}
+
+ol,ul,dl {
+	margin-bottom: 1em;
+}
+
+dd {
+	margin-left: 3em;
+}
+
+/*------------------------------------------------------------------------------
+		Float
+-------------------------------------------------------------------------------*/
+
+.cl {
+	clear: both;
+}
+
+.fl_l {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.fl_r {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+/*------------------------------------------------------------------------------
+		Form
+-------------------------------------------------------------------------------*/
+
+form button,
+form input[type=checkbox],
+form input[type=radio],
+form input[type=reset],
+form input[type=submit] {
+    padding:1px;
+}
+
+form input[type=check],
+form input[type=radio],
+form input[type=submit] {
+    cursor: pointer;
+}
+
+form label {
+	padding-left: 5px;
+	margin-right: 10px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+form input[type=text],
+form textarea {
+    padding: 5px;
+}
+
+form input[type=text]:hover,
+form textarea:hover,
+form input[type=text]:focus,
+form textarea:focus {
+	background-color: #FCF7C1;
+}

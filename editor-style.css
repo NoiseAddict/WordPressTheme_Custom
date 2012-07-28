@@ -1,0 +1,183 @@
+@charset "utf-8";
+
+/*
+editor-style.css
+ビジュアルエディタ（TinyMCE）用のスタイルシート
+*/
+
+@import url("default.css");
+
+/*------------------------------------------------------------------------------
+	基本スタイル　
+-------------------------------------------------------------------------------*/
+body {
+	padding: 10px;
+	background-color: #FFF;
+	color: #333;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 0.85em;
+}
+
+/*------------------------------------------------------------------------------
+	リンクカラー
+	下線はdefault.cssで消してあるので、出したいときは適宜指定すること。
+-------------------------------------------------------------------------------*/
+a:link {
+	color:#039;
+}
+a:visited {
+	color:#606;
+}
+a:hover {
+	color: #F60;
+	text-decoration: underline;
+}
+a:active {
+	color:#C00;
+}
+
+a:hover img {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+
+/*------------------------------------------------------------------------------
+	見出し
+-------------------------------------------------------------------------------*/
+h1,h2,h3,h4,h5,h6 {
+	margin-bottom: 20px;
+	clear: both;
+}
+
+h1.pagetitle {
+	color: #030;
+	font-size: large;
+	font-weight: bold;
+	line-height: 60px;
+	height: 60px;
+	padding: 5px 15px;
+	border: 5px solid #ACC798;
+	background-color: #DEE9D6;
+}
+
+.post h1,h2 {
+	color: #030;
+	font-size: large;
+	font-weight: bold;
+	line-height: 2;
+	padding-left: 1em;
+	border-bottom: 5px solid #ACC798;
+	background-color: #DEE9D6;
+}
+
+h2.posttitle { /* 投稿のタイトル */
+	line-height: 1.4;
+	padding: 10px;
+	border-bottom: 5px double #ACC798;
+	background-color: #FFF;
+}
+
+h3 {
+	color: #066;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 2;
+	padding-left: 1em;
+	border-bottom: 3px solid #DEE9D6;
+	background-color: #EDF3E9;
+	margin: 1em 1em 1em 0;
+}
+
+h4 {
+	color: #066;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 1.8;
+	padding-left: 1em;
+	border-bottom: 3px double #428460;
+	margin: 1em 1em 1em 0;
+}
+
+h5,h6 {
+	color: #066;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1.8;
+	padding-left: 1em;
+	margin: 1em 2em 1em 0;
+}
+
+/*------ main > post　------*/
+.post li {
+	line-height: 1.6;
+	margin: 0 0 0.5em 3em;
+}
+
+.post ul li {
+	list-style: disc;
+}
+
+.post p a {
+	text-decoration: underline;
+}
+
+blockquote {
+	background-color: #F4F6FE;
+	border: 1px solid #999;
+	margin: 0.5em 1em;
+	padding: 10px 20px 10px 5px;
+}
+
+/*　画像の配置　*/
+.alignnone { /*　指定なし　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+}
+
+div.alignnone { /*　指定なし:キャプションあり　*/
+	margin-bottom: 10px;
+}
+
+.alignright { /*　右寄せ　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin: 0 0 10px 10px;
+	float: right;
+}
+
+.alignleft { /*　左寄せ　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin: 0 10px 10px 0;
+	float: left;
+}
+
+.aligncenter { /*　中央配置　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin: 0px auto 10px;
+	display: block;
+}
+
+.wp-caption { /*　位置指定した画像の枠　*/
+	text-align: center;
+}
+
+.wp-caption-text, /*　投稿内画像下のキャプション　*/
+.gallery-caption { /*　ギャラリー画像下のキャプション　*/
+	font-size: 12px;
+	line-height: 1.2;
+	color: #666;
+	margin: 0;
+}
+
+.attachment-post-thumbnail { /*　アイキャッチ画像　*/
+	padding: 4px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	margin-bottom: 10px;
+}
